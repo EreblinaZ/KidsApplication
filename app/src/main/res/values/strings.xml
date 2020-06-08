@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">KidsApp</string>
+    <string name="login">Login</string>
+    <string name="email">Enter Email</string>
+    <string name="password">Enter Password</string>
+    <string name="register">Create an account!</string>
+    <string name="username">Enter Username</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="gender">Gender:</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="birthday">Select Birthday</string>
+    <string name="btnRegister">Register</string>
+    <string name="now_login">Go to Login!</string>
+
+</resources>
