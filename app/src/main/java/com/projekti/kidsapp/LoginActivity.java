@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -52,6 +54,9 @@ public class LoginActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(LoginActivity.this, "Not Registered", Toast.LENGTH_SHORT).show();
                 }
+
+                Animation animation = AnimationUtils.loadAnimation(LoginActivity.this, R.anim.blink);
+                btnLogin.startAnimation(animation);
             }
         });
 

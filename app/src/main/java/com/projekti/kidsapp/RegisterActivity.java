@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -61,6 +63,9 @@ public class RegisterActivity extends AppCompatActivity {
                 String confirmPassword = txtConfirmPassword.getText().toString();
                 String birthday = txtBirthday.getText().toString();
 
+                //button animation
+                Animation animation= AnimationUtils.loadAnimation(RegisterActivity.this, R.anim.blink);
+                btnRegister.startAnimation(animation);
                 // for gender selection
                 select = findViewById(txtGender.getCheckedRadioButtonId());
                 gender = select.getText().toString().trim();
