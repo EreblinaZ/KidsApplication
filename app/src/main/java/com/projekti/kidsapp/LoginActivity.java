@@ -43,7 +43,7 @@ public class LoginActivity extends AppCompatActivity {
                 boolean res = databaseHelper.checkUser(email, password);
 
                 if (TextUtils.isEmpty(email)) {
-                    Toast.makeText(LoginActivity.this, "Please enter the email-id ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Please enter the email ", Toast.LENGTH_SHORT).show();
                 } else if (TextUtils.isEmpty(password)) {
                     Toast.makeText(LoginActivity.this, "Please enter the password ", Toast.LENGTH_SHORT).show();
                 } else if (res) {
