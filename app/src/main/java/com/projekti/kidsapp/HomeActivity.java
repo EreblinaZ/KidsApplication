@@ -6,7 +6,10 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
 import android.widget.Button;
+
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 
 public class HomeActivity extends AppCompatActivity {
     private Button btnAlphabet;
@@ -27,78 +30,40 @@ public class HomeActivity extends AppCompatActivity {
         btnAboutUs = findViewById(R.id.btnAboutUs);
         btnHelp = findViewById(R.id.btnHelp);
 
-        btnAlphabet.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openAlphabetActivity();
-            }
-        });
+     }
 
-        btnNumbers.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openNumbersActivity();
-            }
-        });
+    public void ActivityBtn(View view) {
+        if (view == findViewById(R.id.btnAlphabet)) {
 
-        btnColors.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openColorsActivity();
-            }
-        });
+            startActivity(new Intent(this, AlphabetActivity.class));
+            Animatoo.animateSpin(this);
+        }
+        if(view==findViewById(R.id.btnNumbers)){
+            startActivity(new Intent(this, NumbersActivity.class));
+            Animatoo.animateDiagonal(this);
+        }
+        if(view==findViewById(R.id.btnColors)){
+            startActivity(new Intent(this, ColorsActivity.class));
+            Animatoo.animateSwipeLeft(this);
+        }
+        if(view==findViewById(R.id.btnStories)) {
+            startActivity(new Intent(this, StoriesActivity.class));
+            Animatoo.animateSlideDown(this);
+        }
+        if(view==findViewById(R.id.btnStories)) {
+            startActivity(new Intent(this, StoriesActivity.class));
+            Animatoo.animateSlideUp(this);
+        }
+        if(view==findViewById(R.id.btnAboutUs)){
+            startActivity(new Intent(this, AboutUsActivity.class));
+            Animatoo.animateFade(this);
+        }
+        if(view==findViewById(R.id.btnHelp)){
+            startActivity(new Intent(this, HelpActivity.class));
+            Animatoo.animateZoom(this);
+        }
 
-        btnStories.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openStoriesActivity();
-            }
-        });
 
-        btnAboutUs.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openAboutUsActivity();
-            }
-        });
 
-        btnHelp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openHelpActivity();
-            }
-        });
     }
-
-
-    public void openAlphabetActivity(){
-        Intent intent = new Intent(this, AlphabetActivity.class);
-        startActivity(intent);
-    }
-
-    public void openNumbersActivity(){
-        Intent intent = new Intent(this,NumbersActivity.class);
-        startActivity(intent);
-    }
-
-    public void openColorsActivity(){
-        Intent intent = new Intent(this,ColorsActivity.class);
-        startActivity(intent);
-    }
-
-    public void openStoriesActivity(){
-        Intent intent = new Intent(this,StoriesActivity.class);
-        startActivity(intent);
-    }
-
-    public void openAboutUsActivity(){
-        Intent intent = new Intent(this,AboutUsActivity.class);
-        startActivity(intent);
-    }
-
-    public void openHelpActivity(){
-        Intent intent = new Intent(this,HelpActivity.class);
-        startActivity(intent);
-    }
-
 }
