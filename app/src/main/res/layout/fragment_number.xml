@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragmentNumbers">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B2CCC8"
+        tools:context=".NumberFragment">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Numbers"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="818dp"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/btnNum1"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/app_nr1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnNum2"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/app_nr2"
+                app:layout_constraintStart_toEndOf="@+id/btnNum2"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+
+        <Button
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:id="@+id/btnNum3"
+            android:background="@drawable/app_nr3"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="240dp"/>
+        <Button
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:id="@+id/btnNum4"
+            android:layout_marginStart="230dp"
+            android:layout_marginTop="240dp"
+            android:background="@drawable/app_nr4"/>
+
+        <Button
+            android:id="@+id/btnNum5"
+            android:layout_width="139dp"
+            android:layout_height="130dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="410dp"
+            android:background="@drawable/app_nr5" />
+        <Button
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="230dp"
+            android:layout_marginTop="410dp"
+            android:id="@+id/btnNum6"
+            android:background="@drawable/app_nr6"/>
+
+        <Button
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="560dp"
+            android:id="@+id/btnNum7"
+            android:background="@drawable/app_nr7"/>
+        <Button
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="230dp"
+            android:layout_marginTop="560dp"
+            android:id="@+id/btnNum8"
+            android:background="@drawable/app_nr8"/>
+        <Button
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="720dp"
+            android:id="@+id/btnNum9"
+            android:background="@drawable/app_nr9"/>
+        <Button
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="230dp"
+            android:layout_marginTop="720dp"
+            android:id="@+id/btnNum10"
+            android:background="@drawable/app_nr10"/>
+
+    </FrameLayout>
+</ScrollView>
