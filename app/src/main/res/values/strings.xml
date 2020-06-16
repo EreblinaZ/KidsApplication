@@ -12,5 +12,9 @@
     <string name="birthday">Select Birthday</string>
     <string name="btnRegister">Register</string>
     <string name="now_login">Go to Login!</string>
+    <string name="call">+38344111222</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="btnNr1">ONE</string>
 
 </resources>

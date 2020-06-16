@@ -35,7 +35,7 @@ public class HomeActivity extends AppCompatActivity {
     public void ActivityBtn(View view) {
         if (view == findViewById(R.id.btnAlphabet)) {
 
-            startActivity(new Intent(this, AlphabetActivity.class));
+            startActivity(new Intent(this,AlphabetActivity.class));
             Animatoo.animateSpin(this);
         }
         if(view==findViewById(R.id.btnNumbers)){
@@ -50,10 +50,7 @@ public class HomeActivity extends AppCompatActivity {
             startActivity(new Intent(this, StoriesActivity.class));
             Animatoo.animateSlideDown(this);
         }
-        if(view==findViewById(R.id.btnStories)) {
-            startActivity(new Intent(this, StoriesActivity.class));
-            Animatoo.animateSlideUp(this);
-        }
+
         if(view==findViewById(R.id.btnAboutUs)){
             startActivity(new Intent(this, AboutUsActivity.class));
             Animatoo.animateFade(this);
