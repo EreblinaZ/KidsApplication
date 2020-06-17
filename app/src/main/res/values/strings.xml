@@ -16,5 +16,18 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="btnNr1">ONE</string>
+    <string name="txtView_one">ONE</string>
+    <string name="txtView_ten">TEN</string>
+    <string name="txtView_two">TWO</string>
+    <string name="txtView_three">THREE</string>
+    <string name="txtView_four">FOUR</string>
+    <string name="txtView_five">FIVE</string>
+    <string name="txtView_six">SIX</string>
+    <string name="txtView_seven">SEVEN</string>
+    <string name="txtView_eight">EIGHT</string>
+    <string name="txtViev_nine">NINE</string>
+    <string name="txtView_num">Numbers</string>
+
+
 
 </resources>
