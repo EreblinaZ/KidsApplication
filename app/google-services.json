@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "311433263581",
+    "firebase_url": "https://kidsapp-429ae.firebaseio.com",
+    "project_id": "kidsapp-429ae",
+    "storage_bucket": "kidsapp-429ae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:311433263581:android:8fd5fd83b3ca6a95855e34",
+        "android_client_info": {
+          "package_name": "com.projekti.kidsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "311433263581-e1hjbc7ujauv5tmq5gg5psvo3sjcg1ia.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBalh_SIUvR7BLgT4THRMb08HZbNOEXfM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "311433263581-e1hjbc7ujauv5tmq5gg5psvo3sjcg1ia.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
