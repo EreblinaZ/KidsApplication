@@ -12,15 +12,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".StoriesActivity"></activity>
+        <activity android:name=".StoriesActivity" />
         <activity android:name=".ColorsActivity" />
         <activity android:name=".HelpActivity" />
         <activity android:name=".AboutUsActivity" />
         <activity android:name=".NumbersActivity" />
         <activity android:name=".AlphabetActivity" />
         <activity android:name=".HomeActivity" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".RegisterActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".LoginActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
