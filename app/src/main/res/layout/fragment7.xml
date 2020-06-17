@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="SEVEN"
+        android:text="@string/txtView_seven"
         android:textColor="@color/colorPrimaryDark"
         android:textStyle="bold"
         android:textAlignment="center"/>

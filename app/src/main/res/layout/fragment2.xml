@@ -10,8 +10,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="TWO"
-        android:textSize="30dp"
+        android:text="@string/txtView_two"
+        android:textSize="30sp"
         android:textColor="@color/colorPrimaryDark"
         android:textStyle="bold"
         android:textAlignment="center"/>
