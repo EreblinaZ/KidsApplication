@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
 
 public class NumbersActivity extends AppCompatActivity {
 
-    Button btnFragment1, btnFragment2;
+    Button btnFragment1;
     LinearLayout linearLayout;
 
     @Override
@@ -21,28 +21,10 @@ public class NumbersActivity extends AppCompatActivity {
         fragmentTransaction.add(R.id.linearLayout,new NumberFragment());
         fragmentTransaction.commit();
 
-        btnFragment1 = findViewById(R.id.btnFragment1);
-        btnFragment2 = findViewById(R.id.btnFragment2);
-        linearLayout = findViewById(R.id.linearLayout);
 
-        btnFragment1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                NumberFragment fragment_number = new NumberFragment();
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.linearLayout, fragment_number);
-                transaction.commit();
-            }
-        });
-        btnFragment2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                VideoFragment videoFragment = new VideoFragment();
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.linearLayout, videoFragment);
-                transaction.commit();
 
-            }
-        });
+
+
+
     }
 }
