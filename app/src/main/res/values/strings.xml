@@ -27,6 +27,19 @@
     <string name="txtView_eight">EIGHT</string>
     <string name="txtView_nine">NINE</string>
     <string name="txtView_num">Numbers</string>
+    <string name="textview">TextView</string>
+    <string name="color">Color</string>
+   <string name="redcolor">Red</string>
+    <string name="orangecolor">Orange</string>
+    <string name="yellowcolor">Yellow</string>
+    <string name="greencolor">Green</string>
+    <string name="bluecoloe">Blue</string>
+    <string name="beigecolor">Beige</string>
+    <string name="pinkcolor">Pink</string>
+    <string name="greycolor">Grey</string>
+    <string name="browncolor">Brown</string>
+    <string name="blackcolor">Black</string>
+    <string name="whitecolor">White</string>
 
 
 
