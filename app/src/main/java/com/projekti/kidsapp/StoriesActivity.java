@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -19,9 +20,14 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class StoriesActivity extends AppCompatActivity {
 
+    @BindView(R.id.listView)
     ListView listView;
+
     DatabaseReference databaseReference;
     List<String> title_list, answer_list;
     ArrayAdapter<String> arrayAdapter;
@@ -33,7 +39,8 @@ public class StoriesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stories);
 
-        listView = findViewById(R.id.listView);
+        ButterKnife.bind(this);
+    //    listView = findViewById(R.id.listView);
 
         databaseReference= FirebaseDatabase.getInstance().getReference("kidsapp");
         stories1 = new Stories();
