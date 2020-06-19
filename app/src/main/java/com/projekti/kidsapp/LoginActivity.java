@@ -15,6 +15,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.shashank.sony.fancytoastlib.FancyToast;
+
 public class LoginActivity extends AppCompatActivity {
 
     EditText txtEmail, txtPassword;
@@ -52,7 +54,7 @@ public class LoginActivity extends AppCompatActivity {
                     startActivity(intent);
                     finish();
                 } else {
-                    Toast.makeText(LoginActivity.this, "Not Registered", Toast.LENGTH_SHORT).show();
+                    FancyToast.makeText(LoginActivity.this, "Not Registered", FancyToast.LENGTH_SHORT,FancyToast.ERROR,true).show();
                 }
 
                 Animation animation = AnimationUtils.loadAnimation(LoginActivity.this, R.anim.blink);

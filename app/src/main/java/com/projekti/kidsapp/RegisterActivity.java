@@ -17,6 +17,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.shashank.sony.fancytoastlib.FancyToast;
+
 import java.util.Calendar;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -105,9 +107,9 @@ public class RegisterActivity extends AppCompatActivity {
                 } else {
                     long data = databaseHelper.insertData(name, email, password, birthday, gender);
                     if (data > 0) {
-                        Toast.makeText(RegisterActivity.this, "You are registered", Toast.LENGTH_SHORT).show();
+                        FancyToast.makeText(RegisterActivity.this, "You are registered", FancyToast.LENGTH_LONG,FancyToast.SUCCESS,true).show();
                     } else {
-                        Toast.makeText(RegisterActivity.this, "Registration error", Toast.LENGTH_SHORT).show();
+                        FancyToast.makeText(RegisterActivity.this, "Registration error", FancyToast.LENGTH_LONG,FancyToast.ERROR,true).show();
                     }
                 }
             }
