@@ -13,11 +13,6 @@
         android:layout_height="match_parent"
         android:id="@+id/listView">
 
-        <TextView
 
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Let's learn some beutiful colors!" />
     </ListView>
 </androidx.constraintlayout.widget.ConstraintLayout>
