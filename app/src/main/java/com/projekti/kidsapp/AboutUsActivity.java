@@ -1,14 +1,105 @@
 package com.projekti.kidsapp;
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
+import org.xmlpull.v1.XmlPullParserFactory;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
+
 public class AboutUsActivity extends AppCompatActivity {
 
+
+    private TextView txt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
-   }
+
+        txt = findViewById(R.id.txt);
+        parseXML();
+    }
+
+    private void parseXML() {
+        XmlPullParserFactory parserFactory;
+        try {
+            parserFactory = XmlPullParserFactory.newInstance();
+            XmlPullParser parser = parserFactory.newPullParser();
+            InputStream is = getAssets().open("data.xml");
+            parser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
+            parser.setInput(is, null);
+
+            processParsing(parser);
+
+        } catch (XmlPullParserException | IOException e) {
+
+        }
+    }
+
+    private void processParsing(XmlPullParser parser) throws IOException, XmlPullParserException{
+        ArrayList<Data> datas = new ArrayList<>();
+        int eventType = parser.getEventType();
+        Data currentData= null;
+
+        while (eventType != XmlPullParser.END_DOCUMENT) {
+            String eltName;
+
+            switch (eventType) {
+                case XmlPullParser.START_TAG:
+                    eltName = parser.getName();
+
+                    if ("data".equals(eltName)) {
+                        currentData = new Data();
+                        datas.add(currentData);
+                    } else if (currentData != null) {
+                        if ("seller".equals(eltName)) {
+                            currentData.seller= parser.nextText();
+                        } else if ("category".equals(eltName)) {
+                            currentData.category = parser.nextText();
+                        } else if ("language".equals(eltName)) {
+                            currentData.language = parser.nextText();
+                        } else if ("age".equals(eltName)){
+                            currentData.age=parser.nextText();
+                        } else if("price".equals(eltName)){
+                            currentData.price=parser.nextText();
+                        }else if("copyright".equals(eltName)){
+                            currentData.copyright=parser.nextText();
+                        }
+
+                    }
+                    break;
+
+            }
+
+            eventType = parser.next();
+        }
+
+        printDatas(datas);
+    }
+
+    private void printDatas(ArrayList<Data> datas) {
+        StringBuilder builder=new StringBuilder();
+
+
+
+        for (Data data : datas) {
+            builder.append(data.seller).append("\n").
+                  append(data.category).append("\n").
+                  append(data.language).append("\n").
+                  append(data.age).append("\n").
+                  append(data.price).append("\n").
+                  append(data.copyright).append("\n\n");
+        }
+
+        txt.setText(builder.toString());
+    }
+
 }
+
