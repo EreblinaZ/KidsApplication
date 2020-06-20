@@ -29,7 +29,7 @@
     <string name="txtView_num">Numbers</string>
     <string name="textview">TextView</string>
     <string name="color">Color</string>
-   <string name="redcolor">Red</string>
+    <string name="redcolor">Red</string>
     <string name="orangecolor">Orange</string>
     <string name="yellowcolor">Yellow</string>
     <string name="greencolor">Green</string>
@@ -42,7 +42,9 @@
     <string name="whitecolor">White</string>
     <string name="txtView_call">+38344111222</string>
     <string name="txtView_mail">codetechnology@gmail.com</string>
-
+    <string name="alphabet">Alphabet</string>
+    <string name="consonants">Consonants</string>
+    <string name="vowels">Vowels</string>
 
 
 </resources>
