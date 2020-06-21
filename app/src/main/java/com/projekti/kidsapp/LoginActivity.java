@@ -5,16 +5,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,6 +30,11 @@ public class LoginActivity extends AppCompatActivity {
     Button btnLogin;
     TextView registerLink;
     DatabaseHelper databaseHelper;
+
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
+    Boolean saveLogin;
+    CheckBox saveLoginCheckBox;
 
     private  final int REQUEST_PERMISSION_CODE = 1;
 
@@ -43,7 +51,15 @@ public class LoginActivity extends AppCompatActivity {
         txtEmail = findViewById(R.id.txtEmail);
         txtPassword = findViewById(R.id.txtPassword);
         btnLogin = findViewById(R.id.btnLogin);
+
+
+        sharedPreferences = getSharedPreferences("loginref", MODE_PRIVATE);
+        saveLoginCheckBox = findViewById(R.id.checkBoxRememberMe);
+        editor = sharedPreferences.edit();
+
+
         registerLink = findViewById(R.id.registerLink);
+
 
         databaseHelper = new DatabaseHelper(this);
 
@@ -51,9 +67,12 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                login();
+
                 String email = txtEmail.getText().toString();
                 String password = txtPassword.getText().toString();
                 boolean res = databaseHelper.checkUser(email, password);
+
 
                 if (TextUtils.isEmpty(email)) {
                     Toast.makeText(LoginActivity.this, "Please enter the email ", Toast.LENGTH_SHORT).show();
@@ -73,6 +92,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+
         registerLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -81,6 +101,17 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+
+        // Shared Preferences
+        saveLogin = sharedPreferences.getBoolean("save login", true);
+        if(saveLogin){
+            txtEmail.setText(sharedPreferences.getString("email",null));
+            txtPassword.setText(sharedPreferences.getString("password",null));
+        }
+
+
+
+        // Permissions
         if (checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             writeToDisk();
         }
@@ -93,5 +124,18 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void writeToDisk() {
+    }
+
+
+    public void login(){
+        String email = txtEmail.getText().toString();
+        String password = txtPassword.getText().toString();
+
+        if(saveLoginCheckBox.isChecked()){
+            editor.putBoolean("savelogin", true);
+            editor.putString("email", email);
+            editor.putString("password",password);
+            editor.commit();
+        }
     }
 }

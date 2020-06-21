@@ -13,6 +13,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
+            android:contentDescription="@string/description"
             android:id="@+id/charA"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -23,6 +24,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
+            android:contentDescription="@string/description"
             android:id="@+id/charE"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -33,6 +35,7 @@
             app:layout_constraintTop_toTopOf="parent"/>
 
         <ImageView
+            android:contentDescription="@string/description"
             android:id="@+id/charI"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -43,6 +46,7 @@
             app:layout_constraintTop_toTopOf="parent"/>
 
         <ImageView
+            android:contentDescription="@string/description"
             android:id="@+id/charO"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -53,6 +57,7 @@
             app:layout_constraintTop_toBottomOf="@+id/charA" />
 
         <ImageView
+            android:contentDescription="@string/description"
             android:id="@+id/charU"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -63,6 +68,7 @@
             app:layout_constraintTop_toBottomOf="@+id/charE"/>
 
         <ImageView
+            android:contentDescription="@string/description"
             android:id="@+id/charY"
             android:layout_width="100dp"
             android:layout_height="100dp"

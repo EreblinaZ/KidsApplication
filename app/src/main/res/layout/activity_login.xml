@@ -17,6 +17,7 @@
         android:orientation="vertical">
 
         <ImageView
+            android:contentDescription="@string/description"
             android:layout_width="300dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
@@ -30,6 +31,7 @@
             android:orientation="horizontal">
 
             <ImageView
+                android:contentDescription="@string/description"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
@@ -43,7 +45,9 @@
                     android:layout_marginTop="20dp"
                     android:hint="@string/email"
                     android:textSize="25sp"
-                    android:lines="1" />
+                    android:lines="1"
+                    android:autofillHints="email"
+                    android:inputType="textEmailAddress"/>
         </LinearLayout>
 
         <!-- Password textfield -->
@@ -54,6 +58,7 @@
             android:orientation="horizontal">
 
             <ImageView
+                android:contentDescription="@string/description"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
@@ -67,8 +72,19 @@
                     android:hint="@string/password"
                     android:inputType="textPassword"
                     android:textSize="25sp"
-                    android:lines="1"/>
+                    android:lines="1"
+                    android:autofillHints="password" />
         </LinearLayout>
+
+
+        <!--Check Box-->
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBoxRememberMe"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"
+            android:text="@string/check_remember" />
 
         <!--Login Button -->
         <Button

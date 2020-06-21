@@ -14,6 +14,7 @@
 
 
         <ImageView
+            android:contentDescription="@string/description"
             android:id="@+id/charB"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -24,6 +25,7 @@
             app:layout_constraintTop_toTopOf="parent"/>
 
         <ImageView
+            android:contentDescription="@string/description"
             android:id="@+id/charC"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -35,6 +37,7 @@
 
 
         <ImageView
+            android:contentDescription="@string/description"
             android:id="@+id/charD"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -46,6 +49,7 @@
 
 
         <ImageView
+            android:contentDescription="@string/description"
             android:id="@+id/charF"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -56,6 +60,7 @@
             app:layout_constraintTop_toBottomOf="@+id/charB"/>
 
         <ImageView
+            android:contentDescription="@string/description"
             android:id="@+id/charG"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -66,6 +71,7 @@
             app:layout_constraintTop_toBottomOf="@+id/charC"/>
 
         <ImageView
+            android:contentDescription="@string/description"
             android:id="@+id/charH"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -77,6 +83,7 @@
 
 
         <ImageView
+            android:contentDescription="@string/description"
             android:id="@+id/charJ"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -87,6 +94,7 @@
             app:layout_constraintTop_toBottomOf="@+id/charF"/>
 
         <ImageView
+            android:contentDescription="@string/description"
             android:id="@+id/charK"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -97,6 +105,7 @@
             app:layout_constraintTop_toBottomOf="@+id/charG"/>
 
         <ImageView
+            android:contentDescription="@string/description"
             android:id="@+id/charL"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -107,6 +116,7 @@
             app:layout_constraintTop_toBottomOf="@+id/charH"/>
 
         <ImageView
+            android:contentDescription="@string/description"
             android:id="@+id/charM"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -117,6 +127,7 @@
             app:layout_constraintTop_toBottomOf="@+id/charJ"/>
 
         <ImageView
+            android:contentDescription="@string/description"
             android:id="@+id/charN"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -128,6 +139,7 @@
 
 
         <ImageView
+            android:contentDescription="@string/description"
             android:id="@+id/charP"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -138,6 +150,7 @@
             app:layout_constraintTop_toBottomOf="@+id/charL" />
 
         <ImageView
+            android:contentDescription="@string/description"
             android:id="@+id/charQ"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -148,6 +161,7 @@
             app:layout_constraintTop_toBottomOf="@+id/charM"/>
 
         <ImageView
+            android:contentDescription="@string/description"
             android:id="@+id/charR"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -158,6 +172,7 @@
             app:layout_constraintTop_toBottomOf="@+id/charN"/>
 
         <ImageView
+            android:contentDescription="@string/description"
             android:id="@+id/charS"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -168,6 +183,7 @@
             app:layout_constraintTop_toBottomOf="@+id/charP"/>
 
         <ImageView
+            android:contentDescription="@string/description"
             android:id="@+id/charT"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -179,6 +195,7 @@
 
 
         <ImageView
+            android:contentDescription="@string/description"
             android:id="@+id/charV"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -189,6 +206,7 @@
             app:layout_constraintTop_toBottomOf="@+id/charR"/>
 
         <ImageView
+            android:contentDescription="@string/description"
             android:id="@+id/charW"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -199,6 +217,7 @@
             app:layout_constraintTop_toBottomOf="@+id/charS"/>
 
         <ImageView
+            android:contentDescription="@string/description"
             android:id="@+id/charX"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -210,6 +229,7 @@
 
 
         <ImageView
+            android:contentDescription="@string/description"
             android:id="@+id/charZ"
             android:layout_width="100dp"
             android:layout_height="100dp"

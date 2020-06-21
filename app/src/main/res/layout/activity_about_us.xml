@@ -21,6 +21,7 @@
         android:layout_marginLeft="20dp">
 
         <ImageView
+            android:contentDescription="@string/description"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/app_call" />
@@ -47,7 +48,9 @@
         tools:layout_editor_absoluteX="0dp"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp">
+
         <ImageView
+            android:contentDescription="@string/description"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/app_mail1"/>
@@ -55,7 +58,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="codetechnology@gmail.com"
+            android:text="@string/codetechnology_gmail_com"
             android:textAlignment="center"
             android:textSize="23sp" />
 

@@ -45,6 +45,9 @@
     <string name="alphabet">Alphabet</string>
     <string name="consonants">Consonants</string>
     <string name="vowels">Vowels</string>
-
+    <string name="description">Image</string>
+    <string name="codetechnology_gmail_com">codetechnology@gmail.com</string>
+    <string name="colorname">ColorName</string>
+    <string name="check_remember">Remember me</string>
 
 </resources>

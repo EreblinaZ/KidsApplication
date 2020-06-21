@@ -16,12 +16,14 @@
         android:textAlignment="center"/>
 
     <ImageView
+        android:contentDescription="@string/description"
         android:id="@+id/imageView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/app_seven" />
 
     <ImageView
+        android:contentDescription="@string/description"
         android:id="@+id/imageView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,6 +31,7 @@
         android:layout_marginTop="220dp"/>
 
     <ImageView
+        android:contentDescription="@string/description"
         android:id="@+id/imageView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,6 +39,7 @@
         android:layout_marginTop="380dp"/>
 
     <ImageView
+        android:contentDescription="@string/description"
         android:id="@+id/imageView22"
         android:layout_width="393dp"
         android:layout_height="wrap_content"

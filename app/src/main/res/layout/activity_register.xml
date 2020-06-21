@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F6F6F4"
@@ -12,6 +13,7 @@
         android:orientation="vertical">
 
         <ImageView
+            android:contentDescription="@string/description"
             android:layout_width="192dp"
             android:layout_height="120dp"
             android:layout_gravity="center"
@@ -26,6 +28,7 @@
             android:layout_marginTop="15dp">
 
             <ImageView
+                android:contentDescription="@string/description"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
@@ -38,7 +41,9 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/username"
                 android:textSize="20sp"
-                android:lines="1"/>
+                android:lines="1"
+                android:autofillHints="username"
+                android:inputType="text" />
         </LinearLayout>
 
 
@@ -49,6 +54,7 @@
             android:layout_marginTop="15dp">
 
             <ImageView
+                android:contentDescription="@string/description"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
@@ -61,7 +67,9 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/email"
                     android:textSize="20sp"
-                    android:lines="1"/>
+                    android:lines="1"
+                    android:autofillHints="email"
+                    android:inputType="textEmailAddress"/>
         </LinearLayout>
 
 
@@ -72,6 +80,7 @@
             android:layout_marginTop="15dp">
 
             <ImageView
+                android:contentDescription="@string/description"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
@@ -85,7 +94,8 @@
                     android:hint="@string/password"
                     android:inputType="textPassword"
                     android:textSize="20sp"
-                    android:lines="1"/>
+                    android:lines="1"
+                    android:autofillHints="password" />
         </LinearLayout>
 
 
@@ -97,6 +107,7 @@
             android:layout_marginTop="15dp">
 
             <ImageView
+                android:contentDescription="@string/description"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
@@ -110,7 +121,8 @@
                     android:hint="@string/confirm_password"
                     android:inputType="textPassword"
                     android:textSize="20sp"
-                    android:lines="1"/>
+                    android:lines="1"
+                    android:autofillHints="password" />
         </LinearLayout>
 
 
@@ -165,9 +177,11 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp">
+            android:layout_marginTop="15dp"
+            tools:ignore="UseCompoundDrawables">
 
             <ImageView
+                android:contentDescription="@string/description"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"

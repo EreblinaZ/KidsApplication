@@ -6,6 +6,7 @@ import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -59,11 +60,12 @@ public class RegisterActivity extends AppCompatActivity {
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String name = txtUsername.getText().toString();
+                String username = txtUsername.getText().toString();
                 String email = txtEmail.getText().toString();
                 String password = txtPassword.getText().toString();
                 String confirmPassword = txtConfirmPassword.getText().toString();
                 String birthday = txtBirthday.getText().toString();
+
 
                 //button animation
                 Animation animation= AnimationUtils.loadAnimation(RegisterActivity.this, R.anim.blink);
@@ -94,8 +96,8 @@ public class RegisterActivity extends AppCompatActivity {
                     }
                 });
 
-                if (TextUtils.isEmpty(name)) {
-                    Toast.makeText(RegisterActivity.this, "Please enter the name ", Toast.LENGTH_SHORT).show();
+                if (TextUtils.isEmpty(username)) {
+                    Toast.makeText(RegisterActivity.this, "Please enter the username ", Toast.LENGTH_SHORT).show();
                 } else if (TextUtils.isEmpty(email)) {
                     Toast.makeText(RegisterActivity.this, "Please enter the email ", Toast.LENGTH_SHORT).show();
                 } else if (TextUtils.isEmpty(password)) {
@@ -105,14 +107,16 @@ public class RegisterActivity extends AppCompatActivity {
                 } else if (TextUtils.isEmpty(birthday)) {
                     Toast.makeText(RegisterActivity.this, "Please select your birth date", Toast.LENGTH_SHORT).show();
                 } else {
-                    long data = databaseHelper.insertData(name, email, password, birthday, gender);
+                    long data = databaseHelper.insertData(username, email, password, birthday, gender);
                     if (data > 0) {
                         FancyToast.makeText(RegisterActivity.this, "You are registered", FancyToast.LENGTH_LONG,FancyToast.SUCCESS,true).show();
                     } else {
                         FancyToast.makeText(RegisterActivity.this, "Registration error", FancyToast.LENGTH_LONG,FancyToast.ERROR,true).show();
                     }
                 }
+
             }
+
         });
 
         loginLink.setOnClickListener(new View.OnClickListener() {
@@ -124,4 +128,5 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
     }
+
 }
