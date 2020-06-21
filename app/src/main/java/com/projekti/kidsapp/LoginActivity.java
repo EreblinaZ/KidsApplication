@@ -1,9 +1,13 @@
 package com.projekti.kidsapp;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -24,6 +28,13 @@ public class LoginActivity extends AppCompatActivity {
     TextView registerLink;
     DatabaseHelper databaseHelper;
 
+    private  final int REQUEST_PERMISSION_CODE = 1;
+
+    private final String[] permissions = new String[]{
+            Manifest.permission.ACCESS_COARSE_LOCATION,
+    };
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,5 +80,18 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        if (checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+            writeToDisk();
+        }
+        else {
+            if(Build.VERSION.SDK_INT >= 23) {
+                requestPermissions(new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, REQUEST_PERMISSION_CODE);
+            }
+        }
+
+    }
+
+    private void writeToDisk() {
     }
 }
