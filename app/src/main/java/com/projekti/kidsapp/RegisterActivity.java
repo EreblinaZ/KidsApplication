@@ -13,11 +13,13 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.shashank.sony.fancytoastlib.FancyToast;
 
 import java.util.Calendar;
@@ -34,6 +36,7 @@ public class RegisterActivity extends AppCompatActivity {
     TextView txtBirthday;
     Calendar calendar;
     int day, month, year;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,12 +57,14 @@ public class RegisterActivity extends AppCompatActivity {
         btnRegister = findViewById(R.id.btnRegister);
         loginLink = findViewById(R.id.loginLink);
         txtBirthday = findViewById(R.id.txtBirthday);
+
     }
 
     public void addData() {
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 String username = txtUsername.getText().toString();
                 String email = txtEmail.getText().toString();
                 String password = txtPassword.getText().toString();

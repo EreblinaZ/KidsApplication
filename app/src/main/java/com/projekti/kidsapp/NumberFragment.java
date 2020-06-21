@@ -5,10 +5,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.SnapHelper;
+
+import com.google.android.material.snackbar.Snackbar;
 
 public class NumberFragment extends Fragment {
 
@@ -24,6 +28,7 @@ public class NumberFragment extends Fragment {
     Button btn10;
 
 
+
     public NumberFragment() {
         // Required empty public constructor
     }
@@ -33,6 +38,7 @@ public class NumberFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_number, container, false);
+
 
         Button btn1 = (Button) view.findViewById(R.id.btnNum1);
         btn2=(Button)view.findViewById(R.id.btnNum2);
@@ -58,6 +64,7 @@ public class NumberFragment extends Fragment {
                 FragmentTransaction fr=getFragmentManager().beginTransaction();
                 fr.replace(R.id.linearLayout, new fragment9());
                 fr.commit();
+
             }
         });
         btn8.setOnClickListener(new View.OnClickListener() {

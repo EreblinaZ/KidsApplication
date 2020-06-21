@@ -8,8 +8,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+import com.google.android.material.snackbar.BaseTransientBottomBar;
+import com.google.android.material.snackbar.Snackbar;
 
 public class HomeActivity extends AppCompatActivity {
     private Button btnAlphabet;
@@ -18,6 +21,7 @@ public class HomeActivity extends AppCompatActivity {
     private Button btnStories;
     private Button btnAboutUs;
     private Button btnHelp;
+    LinearLayout alphabetLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,13 +34,15 @@ public class HomeActivity extends AppCompatActivity {
         btnAboutUs = findViewById(R.id.btnAboutUs);
         btnHelp = findViewById(R.id.btnHelp);
 
+
      }
+
 
     public void ActivityBtn(View view) {
         if (view == findViewById(R.id.btnAlphabet)) {
-
             startActivity(new Intent(this,AlphabetActivity.class));
             Animatoo.animateSpin(this);
+
         }
         if(view==findViewById(R.id.btnNumbers)){
             startActivity(new Intent(this, NumbersActivity.class));
@@ -59,6 +65,7 @@ public class HomeActivity extends AppCompatActivity {
             startActivity(new Intent(this, HelpActivity.class));
             Animatoo.animateZoom(this);
         }
+
 
 
 

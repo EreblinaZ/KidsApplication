@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/aboutus"
     tools:context= "com.projekti.kidsapp.AboutUsActivity">
 
 
@@ -26,13 +27,13 @@
             android:layout_height="50dp"
             android:src="@drawable/app_call" />
 
-        <TextView
-            android:id="@+id/textView2"
+        <Button
+            android:id="@+id/btnCall"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="+38344111222"
+            android:text="@string/_38344111222"
             android:textAlignment="center"
-            android:textSize="35sp" />
+            android:textSize="25sp" />
 
     </LinearLayout>
 
@@ -55,12 +56,13 @@
             android:layout_height="50dp"
             android:src="@drawable/app_mail1"/>
 
-        <TextView
+        <Button
+            android:id="@+id/btnMail"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/codetechnology_gmail_com"
             android:textAlignment="center"
-            android:textSize="23sp" />
+            android:textSize="15sp" />
 
 
     </LinearLayout>

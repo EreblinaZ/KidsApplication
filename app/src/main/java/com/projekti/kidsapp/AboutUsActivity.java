@@ -1,9 +1,15 @@
+
 package com.projekti.kidsapp;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+
+import com.google.android.material.snackbar.Snackbar;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -16,15 +22,51 @@ import java.util.List;
 
 public class AboutUsActivity extends AppCompatActivity {
 
-
+    ConstraintLayout aboutus;
+    Button btnCall;
+    Button btnMail;
     private TextView txt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
 
+        btnMail=findViewById(R.id.btnMail);
+        btnCall=findViewById(R.id.btnCall);
+        aboutus=findViewById(R.id.aboutus);
         txt = findViewById(R.id.txt);
         parseXML();
+
+        btnCall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Snackbar snackbar=Snackbar.make(aboutus, "Call us", Snackbar.LENGTH_INDEFINITE);
+
+                snackbar.setAction("Dismiss", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        snackbar.dismiss();
+                    }
+                });
+                snackbar.setDuration(7000);
+                snackbar.show();
+            }
+        });
+        btnMail.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                final Snackbar snackbar=Snackbar.make(aboutus, "Send mail to us", Snackbar.LENGTH_INDEFINITE);
+
+                snackbar.setAction("Dismiss", new View.OnClickListener(){
+                    @Override
+                    public void onClick(View v){
+                        snackbar.dismiss();
+                    }
+                });
+                snackbar.setDuration(7000);
+                snackbar.show();
+            }
+        });
     }
 
     private void parseXML() {
@@ -91,15 +133,14 @@ public class AboutUsActivity extends AppCompatActivity {
 
         for (Data data : datas) {
             builder.append(data.seller).append("\n").
-                  append(data.category).append("\n").
-                  append(data.language).append("\n").
-                  append(data.age).append("\n").
-                  append(data.price).append("\n").
-                  append(data.copyright).append("\n\n");
+                    append(data.category).append("\n").
+                    append(data.language).append("\n").
+                    append(data.age).append("\n").
+                    append(data.price).append("\n").
+                    append(data.copyright).append("\n\n");
         }
 
         txt.setText(builder.toString());
     }
 
 }
-

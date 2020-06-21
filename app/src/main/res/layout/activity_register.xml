@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F6F6F4"
+    android:id="@+id/registerLayout"
     android:padding="25dp">
 
     <LinearLayout
