@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/homeLayout"
+    android:background="#F8F8F8"
     tools:context=".HomeActivity">
 
-
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <Button
         android:id="@+id/btnAlphabet"
         android:layout_width="140dp"
@@ -53,25 +56,27 @@
         app:layout_constraintStart_toEndOf="@+id/btnColors"
         app:layout_constraintTop_toBottomOf="@+id/btnNumbers" />
 
-    <Button
-        android:id="@+id/btnAboutUs"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/app_about_us"
-        android:onClick="ActivityBtn"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnColors" />
+        <Button
+            android:id="@+id/btnAnimals"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/app_animals"
+            android:onClick="ActivityBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnColors" />
 
-    <Button
-        android:id="@+id/btnHelp"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/app_help"
-        android:onClick="ActivityBtn"
-        app:layout_constraintStart_toEndOf="@+id/btnAboutUs"
-        app:layout_constraintTop_toBottomOf="@+id/btnStories" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/btnAboutUs"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/app_about_us"
+            android:onClick="ActivityBtn"
+            app:layout_constraintStart_toEndOf="@+id/btnAnimals"
+            app:layout_constraintTop_toBottomOf="@+id/btnStories" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

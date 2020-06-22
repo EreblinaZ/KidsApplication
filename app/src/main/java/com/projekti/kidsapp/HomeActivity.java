@@ -20,20 +20,20 @@ public class HomeActivity extends AppCompatActivity {
     private Button btnColors;
     private Button btnStories;
     private Button btnAboutUs;
-    private Button btnHelp;
+    private Button btnAnimals;
     LinearLayout alphabetLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
         btnAlphabet = findViewById(R.id.btnAlphabet);
         btnNumbers = findViewById(R.id.btnNumbers);
         btnColors = findViewById(R.id.btnColors);
         btnStories = findViewById(R.id.btnStories);
         btnAboutUs = findViewById(R.id.btnAboutUs);
-        btnHelp = findViewById(R.id.btnHelp);
-
+        btnAnimals = findViewById(R.id.btnAnimals);
 
      }
 
@@ -61,12 +61,11 @@ public class HomeActivity extends AppCompatActivity {
             startActivity(new Intent(this, AboutUsActivity.class));
             Animatoo.animateFade(this);
         }
-        if(view==findViewById(R.id.btnHelp)){
-            startActivity(new Intent(this, HelpActivity.class));
+
+        if(view==findViewById(R.id.btnAnimals)){
+            startActivity(new Intent(this, AnimalsActivity.class));
             Animatoo.animateZoom(this);
         }
-
-
 
 
     }

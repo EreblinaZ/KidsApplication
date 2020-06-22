@@ -1,0 +1,25 @@
+[{
+  "type": "Farm Animals",
+  "animals": "Dog, cat, cow, sheep, rabbit, duck, hen, horse, pig, turkey, chicken, donkey, goat, llama, etc."
+}, {
+  "type": "Forest Animals",
+  "animals": "Squirrel, snail, mouse, chameleon, deer, lynx, moose, antelope, beaver, wolf, hedgehog, ferret, koala, etc."
+}, {
+  "type": "Jungle Animals",
+  "animals": "Snake, bat, tiger, leopard, parrot, eagle. cockatoo, orangutan, water buffalo, etc."
+}, {
+  "type": "Aquatic Animals",
+  "animals": "Turtle, octopus, frog, whale, crab, clam, fish, lobster, shark, seahorse, squid, shrimp, dolphin, starfish, etc."
+}, {
+  "type": "Desert Animals",
+  "animals": "Fox, wildcat, armadillo, badger, black bear, buffalo, camel, coyote, etc."
+}, {
+  "type": "Savannah Animals",
+  "animals": "Lion, elephant, cheetah, hyena, gazelle, ostrich, weaver, wallaby, etc."
+},{
+  "type": "Arctic Animals",
+  "animals": "Polar bear, arctic fox, seal, reindeer, walrus, sea otter, wolverine, penguin, sparrow, robin, crow, etc."
+}, {
+  "type": "Insects",
+  "animals": "Bee, ant, butterfly, fly, beetle, moth, wasp, dragonfly, grasshopper, cricket, etc."
+}]

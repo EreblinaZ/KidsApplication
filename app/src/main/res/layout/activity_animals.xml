@@ -4,6 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HelpActivity">
+    tools:context=".AnimalsActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/my_recycler_view"
+        android:scrollbars="vertical"
+        tools:listitem="@layout/list_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B3B3B3"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
