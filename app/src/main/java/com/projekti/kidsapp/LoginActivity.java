@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -31,6 +32,8 @@ public class LoginActivity extends AppCompatActivity {
     TextView registerLink;
     DatabaseHelper databaseHelper;
 
+    TextView tvProgress;
+
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
     Boolean saveLogin;
@@ -52,6 +55,7 @@ public class LoginActivity extends AppCompatActivity {
         txtPassword = findViewById(R.id.txtPassword);
         btnLogin = findViewById(R.id.btnLogin);
 
+        tvProgress = findViewById(R.id.tvProgress);
 
         sharedPreferences = getSharedPreferences("loginref", MODE_PRIVATE);
         saveLoginCheckBox = findViewById(R.id.checkBoxRememberMe);
@@ -68,6 +72,9 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 login();
+
+                AsyncTaskWork asyncTaskWork = new AsyncTaskWork();
+                asyncTaskWork.execute();
 
                 String email = txtEmail.getText().toString();
                 String password = txtPassword.getText().toString();
@@ -137,5 +144,42 @@ public class LoginActivity extends AppCompatActivity {
             editor.putString("password",password);
             editor.commit();
         }
+    }
+
+    private class AsyncTaskWork extends AsyncTask<Void, Integer, String> {
+
+        @Override
+        protected void onPreExecute(){
+            tvProgress.setText("0");
+        }
+
+        @Override
+        protected String doInBackground(Void... voids) {
+            for (int i=1; i<=5; i++){
+                waitOneSecond();
+                publishProgress(i);
+            }
+            return "Welcome to KidsApp";
+        }
+
+        @Override
+        protected void onProgressUpdate(Integer... values){
+            tvProgress.setText(values[0].toString());
+        }
+
+        @Override
+        protected void onPostExecute(String result){
+            tvProgress.setText(result);
+        }
+
+    }
+
+    private void waitOneSecond(){
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e){
+
+        }
+
     }
 }
