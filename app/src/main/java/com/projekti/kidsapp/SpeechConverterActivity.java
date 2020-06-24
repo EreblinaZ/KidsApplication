@@ -16,9 +16,9 @@ import java.util.Locale;
 
 public class SpeechConverterActivity extends AppCompatActivity {
 
-    TextView voiceInput;
+ /*   TextView voiceInput;
     ImageView micButton;
-    private static final int req_code=1000;
+    private static final int req_code=1000;*/
 
 
     @Override
@@ -26,7 +26,7 @@ public class SpeechConverterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_speech_converter);
 
-        voiceInput = findViewById(R.id.voiceInput);
+  /*      voiceInput = findViewById(R.id.voiceInput);
         micButton = findViewById(R.id.voiceButton);
 
         micButton.setOnClickListener(new View.OnClickListener() {
@@ -34,10 +34,10 @@ public class SpeechConverterActivity extends AppCompatActivity {
             public void onClick(View v) {
                 getVoiceInput();
             }
-        });
+        });*/
     }
 
-    private void getVoiceInput() {
+ /*   private void getVoiceInput() {
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
                 RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
@@ -65,5 +65,5 @@ public class SpeechConverterActivity extends AppCompatActivity {
                 break;
             }
         }
-    }
+    }*/
 }
