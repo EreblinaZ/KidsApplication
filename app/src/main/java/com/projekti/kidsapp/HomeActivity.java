@@ -1,10 +1,13 @@
 package com.projekti.kidsapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.widget.Button;
@@ -68,5 +71,34 @@ public class HomeActivity extends AppCompatActivity {
         }
 
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId())
+        {
+            case R.id.action_logout:
+                Intent intent = new Intent(this,LoginActivity.class);
+                startActivity(intent);
+                return true;
+
+            case R.id.action_help:
+                Intent intent1 = new Intent(this,HelpActivity.class);
+                startActivity(intent1);
+                return true;
+
+            case R.id.action_exit:
+                moveTaskToBack(true);
+                android.os.Process.killProcess(android.os.Process.myPid());
+                System.exit(1);
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

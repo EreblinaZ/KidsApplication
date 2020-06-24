@@ -13,14 +13,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AnimalsActivity"></activity>
-        <activity android:name=".answer" />
-        <activity android:name=".StoriesActivity" />
-        <activity android:name=".ColorsActivity" />
-        <activity android:name=".HelpActivity" />
-        <activity android:name=".AboutUsActivity" />
-        <activity android:name=".NumbersActivity" />
-        <activity android:name=".AlphabetActivity" />
+        <activity android:name=".HelpActivity"
+            android:parentActivityName=".HomeActivity"/>
+        <activity android:name=".AnimalsActivity"
+            android:parentActivityName=".HomeActivity"/>
+        <activity android:name=".answer"
+            android:parentActivityName=".StoriesActivity"/>
+        <activity android:name=".StoriesActivity"
+            android:parentActivityName=".HomeActivity"/>
+        <activity android:name=".ColorsActivity"
+            android:parentActivityName=".HomeActivity"/>
+        <activity android:name=".AboutUsActivity"
+            android:parentActivityName=".HomeActivity"/>
+        <activity android:name=".NumbersActivity"
+            android:parentActivityName=".HomeActivity"/>
+        <activity android:name=".AlphabetActivity"
+            android:parentActivityName=".HomeActivity"/>
         <activity android:name=".HomeActivity" />
         <activity
             android:name=".RegisterActivity"
@@ -34,6 +42,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data android:name="android.support.PARENT_ACTIVITY"
+            android:value=".HomeActivity"/>
+
     </application>
 
 </manifest>
