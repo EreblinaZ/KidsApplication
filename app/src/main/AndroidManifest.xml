@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
         android:allowBackup="true"
@@ -13,22 +14,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HelpActivity"
+        <activity android:name=".SpeechConverterActivity"
             android:parentActivityName=".HomeActivity"/>
-        <activity android:name=".AnimalsActivity"
-            android:parentActivityName=".HomeActivity"/>
-        <activity android:name=".answer"
-            android:parentActivityName=".StoriesActivity"/>
-        <activity android:name=".StoriesActivity"
-            android:parentActivityName=".HomeActivity"/>
-        <activity android:name=".ColorsActivity"
-            android:parentActivityName=".HomeActivity"/>
-        <activity android:name=".AboutUsActivity"
-            android:parentActivityName=".HomeActivity"/>
-        <activity android:name=".NumbersActivity"
-            android:parentActivityName=".HomeActivity"/>
-        <activity android:name=".AlphabetActivity"
-            android:parentActivityName=".HomeActivity"/>
+        <activity
+            android:name=".HelpActivity"
+            android:parentActivityName=".HomeActivity" />
+        <activity
+            android:name=".AnimalsActivity"
+            android:parentActivityName=".HomeActivity" />
+        <activity
+            android:name=".answer"
+            android:parentActivityName=".StoriesActivity" />
+        <activity
+            android:name=".StoriesActivity"
+            android:parentActivityName=".HomeActivity" />
+        <activity
+            android:name=".ColorsActivity"
+            android:parentActivityName=".HomeActivity" />
+        <activity
+            android:name=".AboutUsActivity"
+            android:parentActivityName=".HomeActivity" />
+        <activity
+            android:name=".NumbersActivity"
+            android:parentActivityName=".HomeActivity" />
+        <activity
+            android:name=".AlphabetActivity"
+            android:parentActivityName=".HomeActivity" />
         <activity android:name=".HomeActivity" />
         <activity
             android:name=".RegisterActivity"
@@ -43,9 +54,9 @@
             </intent-filter>
         </activity>
 
-        <meta-data android:name="android.support.PARENT_ACTIVITY"
-            android:value=".HomeActivity"/>
-
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".HomeActivity" />
     </application>
 
 </manifest>

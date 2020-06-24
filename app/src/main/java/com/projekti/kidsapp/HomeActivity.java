@@ -84,6 +84,11 @@ public class HomeActivity extends AppCompatActivity {
 
         switch (item.getItemId())
         {
+            case R.id.action_speak:
+                Intent intent2 = new Intent(this,SpeechConverterActivity.class);
+                startActivity(intent2);
+                return true;
+
             case R.id.action_logout:
                 Intent intent = new Intent(this,LoginActivity.class);
                 startActivity(intent);
