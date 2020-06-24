@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
 
 public class NumbersActivity extends AppCompatActivity {
 
-    Button btnFragment1;
+
     LinearLayout linearLayout;
 
     @Override
@@ -20,6 +20,10 @@ public class NumbersActivity extends AppCompatActivity {
         FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
         fragmentTransaction.add(R.id.linearLayout,new NumberFragment());
         fragmentTransaction.commit();
+
+        linearLayout=findViewById(R.id.linearLayout);
+
+
 
 
 

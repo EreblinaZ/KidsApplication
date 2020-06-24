@@ -55,6 +55,7 @@ public class NumberFragment extends Fragment {
             public void onClick(View v) {
                 FragmentTransaction fr=getFragmentManager().beginTransaction();
                 fr.replace(R.id.linearLayout, new fragment10());
+                fr.addToBackStack(null);
                 fr.commit();
             }
         });
@@ -63,6 +64,7 @@ public class NumberFragment extends Fragment {
             public void onClick(View v) {
                 FragmentTransaction fr=getFragmentManager().beginTransaction();
                 fr.replace(R.id.linearLayout, new fragment9());
+                fr.addToBackStack(null);
                 fr.commit();
 
             }
@@ -72,6 +74,7 @@ public class NumberFragment extends Fragment {
             public void onClick(View v) {
                 FragmentTransaction fr=getFragmentManager().beginTransaction();
                 fr.replace(R.id.linearLayout, new fragment8());
+                fr.addToBackStack(null);
                 fr.commit();
             }
         });
@@ -80,6 +83,7 @@ public class NumberFragment extends Fragment {
             public void onClick(View v) {
                 FragmentTransaction fr=getFragmentManager().beginTransaction();
                 fr.replace(R.id.linearLayout,new fragment7());
+                fr.addToBackStack(null);
                 fr.commit();
             }
         });
@@ -88,6 +92,7 @@ public class NumberFragment extends Fragment {
             public void onClick(View v) {
                 FragmentTransaction fr=getFragmentManager().beginTransaction();
                 fr.replace(R.id.linearLayout,new fragment6());
+                fr.addToBackStack(null);
                 fr.commit();
             }
         });
@@ -96,6 +101,7 @@ public class NumberFragment extends Fragment {
             public void onClick(View v) {
                 FragmentTransaction fr=getFragmentManager().beginTransaction();
                 fr.replace(R.id.linearLayout, new fragment5());
+                fr.addToBackStack(null);
                 fr.commit();
             }
         });
@@ -104,6 +110,7 @@ public class NumberFragment extends Fragment {
             public void onClick(View v) {
                 FragmentTransaction fr=getFragmentManager().beginTransaction();
                 fr.replace(R.id.linearLayout, new fragment4());
+                fr.addToBackStack(null);
                 fr.commit();
             }
         });
@@ -112,6 +119,7 @@ public class NumberFragment extends Fragment {
             public void onClick(View v){
                 FragmentTransaction fr=getFragmentManager().beginTransaction();
                 fr.replace(R.id.linearLayout, new fragment3());
+                fr.addToBackStack(null);
                 fr.commit();
             }
         });
@@ -120,6 +128,7 @@ public class NumberFragment extends Fragment {
             public void onClick(View v) {
                 FragmentTransaction fr=getFragmentManager().beginTransaction();
                 fr.replace(R.id.linearLayout, new fragment2());
+                fr.addToBackStack(null);
                 fr.commit();
             }
         });
@@ -128,11 +137,13 @@ public class NumberFragment extends Fragment {
             public void onClick(View v) {
                 FragmentTransaction fr = getFragmentManager().beginTransaction();
                 fr.replace(R.id.linearLayout, new fragment1());
+                fr.addToBackStack(null);
                 fr.commit();
 
             }
         });
         return view;
+
 
 
 
