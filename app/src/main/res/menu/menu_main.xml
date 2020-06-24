@@ -3,12 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/action_speak"
-        android:icon="@drawable/ic_baseline_mic_24"
-        app:showAsAction="ifRoom"
-        android:title="@string/converter" />
-
-    <item
         android:id="@+id/action_help"
         android:title="@string/help"
         app:showAsAction="never"/>
