@@ -49,16 +49,18 @@
     <string name="codetechnology_gmail_com">codetechnology@gmail.com</string>
     <string name="colorname">ColorName</string>
     <string name="check_remember">Remember me</string>
-    <string name="_38344111222">+38344111222</string>
     <string name="type">Type</string>
     <string name="animals">Animals</string>
     <string name="help">Help</string>
     <string name="logout">Logout</string>
     <string name="exit">Exit</string>
-    <string name="converter">Converter</string>
     <string name="_38344111222">+38344111222</string>
     <string name="_38349122133">+38349122133</string>
     <string name="_38345100100">+38345100100</string>
     <string name="call_us">Call us</string>
+    <string name="infoHelp">KidsApp is a mobile application for Android OS that makes kids familiar with alphabet, numbers, colors and basic things. Kids who struggle with spelling can say a word or sound it out, and then see how it’s spelled on screen. There are a lot of interesting stories to read too. Have fun!</string>
+    <string name="titleHelp">Welcome to Kids Application</string>
+    <string name="tap_to_speech">Tap to Speech</string>
+    <string name="converter">Converter</string>
 
 </resources>

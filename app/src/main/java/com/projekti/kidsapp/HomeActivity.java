@@ -98,6 +98,11 @@ public class HomeActivity extends AppCompatActivity {
                 moveTaskToBack(true);
                 android.os.Process.killProcess(android.os.Process.myPid());
                 System.exit(1);
+
+            case R.id.action_speak:
+                Intent intent2 = new Intent(this,SpeechConverterActivity.class);
+                startActivity(intent2);
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }

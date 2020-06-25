@@ -6,6 +6,9 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
+ <!--   <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,6 +16,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <activity android:name=".SpeechConverterActivity"
+            android:parentActivityName=".HomeActivity" />
         <activity
             android:name=".HelpActivity"
             android:parentActivityName=".HomeActivity" />
@@ -31,9 +37,7 @@
         <activity
             android:name=".AboutUsActivity"
             android:parentActivityName=".HomeActivity" />
-        <activity
-            android:name=".NumbersActivity"
-            android:parentActivityName=".HomeActivity" />
+        <activity android:name=".NumbersActivity" />
         <activity
             android:name=".AlphabetActivity"
             android:parentActivityName=".HomeActivity" />
