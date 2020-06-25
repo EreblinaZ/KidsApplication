@@ -2,9 +2,14 @@
 package com.projekti.kidsapp;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.PopupMenu;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -25,33 +30,34 @@ public class AboutUsActivity extends AppCompatActivity {
     ConstraintLayout aboutus;
     Button btnCall;
     Button btnMail;
+    Button btnpopUp;
     private TextView txt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
-
         btnMail=findViewById(R.id.btnMail);
         btnCall=findViewById(R.id.btnCall);
         aboutus=findViewById(R.id.aboutus);
         txt = findViewById(R.id.txt);
+        btnpopUp=findViewById(R.id.btnpopUp);
         parseXML();
 
-        btnCall.setOnClickListener(new View.OnClickListener() {
+        /*btnCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Snackbar snackbar=Snackbar.make(aboutus, "Call us", Snackbar.LENGTH_INDEFINITE);
 
-                snackbar.setAction("Dismiss", new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        snackbar.dismiss();
-                    }
-                });
+               final Snackbar snackbar=Snackbar.make(aboutus, "Call us", Snackbar.LENGTH_INDEFINITE);
+                  snackbar.setAction("Dismiss", new View.OnClickListener() {
+                      @Override
+                      public void onClick(View v) {
+                          snackbar.dismiss();
+                      }
+                  });
                 snackbar.setDuration(7000);
                 snackbar.show();
             }
-        });
+        });*/
         btnMail.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -67,7 +73,38 @@ public class AboutUsActivity extends AppCompatActivity {
                 snackbar.show();
             }
         });
+        btnCall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                final Snackbar snackbar=Snackbar.make(aboutus, "See our phone numbers in the icon", Snackbar.LENGTH_INDEFINITE);
+                snackbar.setAction("Dismiss", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        snackbar.dismiss();
+                    }
+                });
+                snackbar.setDuration(7000);
+                snackbar.show();
+            }
+        });
     }
+    public void popUpMenu(View v){
+        PopupMenu p=new PopupMenu(AboutUsActivity.this, btnpopUp);
+        p.getMenuInflater().inflate(R.menu.popup_menu,p.getMenu());
+        p.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+                Toast.makeText(AboutUsActivity.this,menuItem.getTitle(), Toast.LENGTH_LONG).show();;
+                return true;
+            }
+        });
+        p.show();
+    }
+
+
+
+
 
     private void parseXML() {
         XmlPullParserFactory parserFactory;
@@ -142,5 +179,6 @@ public class AboutUsActivity extends AppCompatActivity {
 
         txt.setText(builder.toString());
     }
+
 
 }

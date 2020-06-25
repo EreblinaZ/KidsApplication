@@ -21,19 +21,22 @@
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp">
 
-        <ImageView
+        <Button
             android:contentDescription="@string/description"
             android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/app_call" />
+            android:layout_height="60dp"
+            android:background="@drawable/app_call"
+            android:onClick="popUpMenu"
+            android:id="@+id/btnpopUp"/>
 
         <Button
             android:id="@+id/btnCall"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="@string/_38344111222"
+            android:text="@string/call_us"
             android:textAlignment="center"
-            android:textSize="25sp" />
+            android:textSize="15sp"
+             />
 
     </LinearLayout>
 
