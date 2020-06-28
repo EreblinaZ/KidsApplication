@@ -62,5 +62,7 @@
     <string name="titleHelp">Welcome to Kids Application</string>
     <string name="tap_to_speech">Tap to Speech</string>
     <string name="converter">Converter</string>
+    <string name="information_about_us">Information About Us</string>
+    <string name="saySomething">Say something and see how it’s spelled</string>
 
 </resources>
