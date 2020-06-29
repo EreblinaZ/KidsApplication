@@ -23,7 +23,7 @@
 
     <ImageView
         android:id="@+id/imageHorse"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="220dp"
         android:layout_marginTop="10dp"
         android:contentDescription="@string/description"
@@ -34,7 +34,7 @@
 
     <ImageView
         android:id="@+id/imageFish"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="190dp"
         android:contentDescription="@string/description"
         android:src="@drawable/app_nje"
@@ -44,7 +44,7 @@
 
     <ImageView
         android:id="@+id/imageBanana"
-        android:layout_width="320dp"
+        android:layout_width="match_parent"
         android:layout_height="115dp"
         android:contentDescription="@string/description"
         android:src="@drawable/app_oneb"

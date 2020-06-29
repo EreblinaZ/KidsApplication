@@ -21,7 +21,7 @@
 
     <ImageView
         android:id="@+id/imageBees"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="250dp"
         android:layout_marginTop="15dp"
         android:contentDescription="@string/description"
@@ -32,7 +32,7 @@
 
     <ImageView
         android:id="@+id/imageFly"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="200dp"
         android:contentDescription="@string/description"
         android:src="@drawable/app_10"
@@ -42,7 +42,7 @@
 
     <ImageView
         android:id="@+id/imagePenguins"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="200dp"
         android:contentDescription="@string/description"
         android:src="@drawable/app_10a"

@@ -22,8 +22,8 @@
 
     <ImageView
         android:id="@+id/imageFrog"
-        android:layout_width="wrap_content"
-        android:layout_height="230dp"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
         android:contentDescription="@string/description"
         android:src="@drawable/app_nine"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,8 +32,8 @@
 
     <ImageView
         android:id="@+id/imageShip"
-        android:layout_width="wrap_content"
-        android:layout_height="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
         android:layout_marginTop="10dp"
         android:contentDescription="@string/description"
         android:src="@drawable/app_9"
@@ -43,8 +43,8 @@
 
     <ImageView
         android:id="@+id/imageDolphins"
-        android:layout_width="wrap_content"
-        android:layout_height="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
         android:layout_marginTop="5dp"
         android:contentDescription="@string/description"
         android:src="@drawable/app_9a"

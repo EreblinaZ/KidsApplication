@@ -22,7 +22,7 @@
 
     <ImageView
         android:id="@+id/imageFrog"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="160dp"
         android:contentDescription="@string/description"
         android:src="@drawable/app_nine"
@@ -32,7 +32,7 @@
 
     <ImageView
         android:id="@+id/imageShip"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="130dp"
         android:layout_marginTop="5dp"
         android:contentDescription="@string/description"
@@ -43,7 +43,7 @@
 
     <ImageView
         android:id="@+id/imageDolphins"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="130dp"
         android:layout_marginTop="5dp"
         android:contentDescription="@string/description"

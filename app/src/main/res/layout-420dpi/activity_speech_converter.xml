@@ -52,7 +52,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="20dp"
         android:text="@string/tap_to_speech"
-        android:textSize="18sp"
+        android:textSize="23sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

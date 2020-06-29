@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment10">
+
+    <TextView
+        android:id="@+id/textTen"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="@string/txtView_ten"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageBees"
+        android:layout_width="610dp"
+        android:layout_height="320dp"
+        android:layout_marginTop="15dp"
+        android:contentDescription="@string/description"
+        android:src="@drawable/app_ten"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTen" />
+
+    <ImageView
+        android:id="@+id/imageFly"
+        android:layout_width="600dp"
+        android:layout_height="220dp"
+        android:contentDescription="@string/description"
+        android:src="@drawable/app_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageBees" />
+
+    <ImageView
+        android:id="@+id/imagePenguins"
+        android:layout_width="600dp"
+        android:layout_height="220dp"
+        android:contentDescription="@string/description"
+        android:src="@drawable/app_10a"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageFly" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

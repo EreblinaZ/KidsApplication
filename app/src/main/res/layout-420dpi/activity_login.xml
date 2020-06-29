@@ -21,13 +21,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textSize="25sp"
+            android:textSize="30sp"
             android:textColor="#5C4877"/>
 
         <ImageView
             android:contentDescription="@string/description"
             android:layout_width="300dp"
-            android:layout_height="200dp"
+            android:layout_height="230dp"
             android:layout_gravity="center"
             android:src="@drawable/app_logo" />
 
@@ -35,7 +35,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="5dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -98,7 +98,7 @@
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="190dp"
-            android:layout_height="60sp"
+            android:layout_height="55sp"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:text="@string/login"

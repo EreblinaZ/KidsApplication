@@ -21,7 +21,7 @@
 
     <ImageView
         android:id="@+id/imageRabbits"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="170dp"
         android:layout_marginTop="25dp"
         android:contentDescription="@string/description"
@@ -32,7 +32,7 @@
 
     <ImageView
         android:id="@+id/imageBirds"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="180dp"
         android:layout_marginTop="40dp"
         android:contentDescription="@string/description"

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/numnine"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment9">
+
+    <TextView
+        android:id="@+id/textNine"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="@string/txtView_nine"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageFrog"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:contentDescription="@string/description"
+        android:src="@drawable/app_nine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNine" />
+
+    <ImageView
+        android:id="@+id/imageShip"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/description"
+        android:src="@drawable/app_9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageFrog" />
+
+    <ImageView
+        android:id="@+id/imageDolphins"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/description"
+        android:src="@drawable/app_9a"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageShip" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

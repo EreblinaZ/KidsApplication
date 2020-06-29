@@ -21,7 +21,7 @@
 
     <ImageView
         android:id="@+id/imageCats"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_marginTop="10dp"
         android:contentDescription="@string/description"
@@ -32,7 +32,7 @@
 
     <ImageView
         android:id="@+id/imageBus"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="200dp"
         android:contentDescription="@string/description"
         android:src="@drawable/app_tete"
@@ -43,7 +43,7 @@
 
     <ImageView
         android:id="@+id/imageLeopard"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_marginTop="5dp"
         android:contentDescription="@string/description"
