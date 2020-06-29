@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Vowels"
+    android:background="#ffffff">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:contentDescription="@string/description"
+            android:id="@+id/charA"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/a"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:contentDescription="@string/description"
+            android:id="@+id/charE"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/e"
+            app:layout_constraintStart_toEndOf="@+id/charA"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:contentDescription="@string/description"
+            android:id="@+id/charI"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/i"
+            app:layout_constraintStart_toEndOf="@+id/charE"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:contentDescription="@string/description"
+            android:id="@+id/charO"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/o"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/charA" />
+
+        <ImageView
+            android:contentDescription="@string/description"
+            android:id="@+id/charU"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/u"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toEndOf="@+id/charO"
+            app:layout_constraintTop_toBottomOf="@+id/charE"/>
+
+        <ImageView
+            android:contentDescription="@string/description"
+            android:id="@+id/charY"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/y"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toEndOf="@+id/charU"
+            app:layout_constraintTop_toBottomOf="@+id/charI"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

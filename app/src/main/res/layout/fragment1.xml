@@ -1,44 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_nr1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment1"
-    android:id="@+id/fragment_nr1">
+    tools:context=".fragment1">
 
 
     <TextView
+        android:id="@+id/textOne"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="35dp"
         android:text="@string/txtView_one"
-        android:textSize="30sp"
+        android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
+        android:textSize="30sp"
         android:textStyle="bold"
-        android:textAlignment="center"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+        android:id="@+id/imageHorse"
+        android:layout_width="wrap_content"
+        android:layout_height="230dp"
+        android:layout_marginTop="25dp"
         android:contentDescription="@string/description"
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:src="@drawable/app_one"
-        android:layout_marginTop="30dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textOne" />
 
     <ImageView
-        android:contentDescription="@string/description"
-        android:id="@+id/imageView2"
+        android:id="@+id/imageFish"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="230dp"
+        android:contentDescription="@string/description"
         android:src="@drawable/app_nje"
-        android:layout_marginTop="160dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageHorse" />
 
     <ImageView
+        android:id="@+id/imageBanana"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
         android:contentDescription="@string/description"
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:src="@drawable/app_oneb"
-        android:layout_marginTop="430dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageFish" />
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

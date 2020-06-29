@@ -4,42 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment2">
+    tools:context=".fragment3">
+
 
     <TextView
-        android:id="@+id/textTwo"
+        android:id="@+id/textThree"
         android:layout_width="match_parent"
         android:layout_height="35dp"
-        android:text="@string/txtView_two"
+        android:text="@string/txtView_three"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageCows"
+        android:id="@+id/imagePigs"
         android:layout_width="wrap_content"
-        android:layout_height="300dp"
-        android:layout_marginTop="15dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="5dp"
         android:contentDescription="@string/description"
-        android:src="@drawable/app_two"
+        android:src="@drawable/app_three"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTwo" />
+        app:layout_constraintTop_toBottomOf="@+id/textThree" />
 
     <ImageView
-        android:id="@+id/imageApples"
-        android:layout_width="400dp"
-        android:layout_height="250dp"
+        android:id="@+id/imageBalls"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
         android:layout_marginTop="15dp"
         android:contentDescription="@string/description"
-        android:src="@drawable/app_dyy"
+        android:src="@drawable/three"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageCows" />
+        app:layout_constraintTop_toBottomOf="@+id/imagePigs" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,42 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment2">
+    tools:context=".fragment5">
 
     <TextView
-        android:id="@+id/textTwo"
+        android:id="@+id/textFive"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:text="@string/txtView_two"
+        android:layout_height="25dp"
+        android:text="@string/txtView_five"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageCows"
+        android:id="@+id/imageRabbits"
         android:layout_width="wrap_content"
-        android:layout_height="300dp"
-        android:layout_marginTop="15dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="25dp"
         android:contentDescription="@string/description"
-        android:src="@drawable/app_two"
+        android:src="@drawable/app_five"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTwo" />
+        app:layout_constraintTop_toBottomOf="@+id/textFive" />
 
     <ImageView
-        android:id="@+id/imageApples"
-        android:layout_width="400dp"
-        android:layout_height="250dp"
-        android:layout_marginTop="15dp"
+        android:id="@+id/imageBirds"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:layout_marginTop="40dp"
         android:contentDescription="@string/description"
-        android:src="@drawable/app_dyy"
+        android:src="@drawable/app_pese"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageCows" />
-
+        app:layout_constraintTop_toBottomOf="@+id/imageRabbits" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

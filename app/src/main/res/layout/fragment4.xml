@@ -1,41 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragment4">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/textFour"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="35dp"
+        android:textSize="30sp"
         android:text="@string/txtView_four"
+        android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
         android:textStyle="bold"
-        android:textAlignment="center"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:contentDescription="@string/description"
-        android:id="@+id/imageView8"
+        android:id="@+id/imageTurtles"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/app_four" />
+        android:layout_height="200dp"
+        android:layout_marginTop="12dp"
+        android:contentDescription="@string/description"
+        android:src="@drawable/app_four"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFour" />
 
     <ImageView
+        android:id="@+id/imageBalloons"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="15dp"
         android:contentDescription="@string/description"
-        android:id="@+id/imageView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:src="@drawable/app_kater"
-        android:layout_marginTop="210dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageTurtles" />
 
     <ImageView
+        android:id="@+id/imageCars"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
         android:contentDescription="@string/description"
-        android:id="@+id/imageView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:src="@drawable/app_katera"
-        android:layout_marginTop="390dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageBalloons" />
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,7 +18,7 @@
             android:text="@string/txtView_num"
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="30sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -28,8 +28,8 @@
         <Button
             android:id="@+id/btnNum1"
             style="?android:attr/borderlessButtonStyle"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginStart="40dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/app_nr1"
@@ -39,8 +39,8 @@
         <Button
             android:id="@+id/btnNum2"
             style="?android:attr/borderlessButtonStyle"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginStart="50dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/app_nr2"
@@ -49,8 +49,8 @@
 
         <Button
             android:id="@+id/btnNum3"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginStart="40dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/app_nr3"
@@ -59,8 +59,8 @@
 
         <Button
             android:id="@+id/btnNum4"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginStart="50dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/app_nr4"
@@ -69,8 +69,8 @@
 
         <Button
             android:id="@+id/btnNum5"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginStart="40dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/app_nr5"
@@ -79,8 +79,8 @@
 
         <Button
             android:id="@+id/btnNum6"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginStart="50dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/app_nr6"
@@ -89,8 +89,8 @@
 
         <Button
             android:id="@+id/btnNum7"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginStart="40dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/app_nr7"
@@ -99,8 +99,8 @@
 
         <Button
             android:id="@+id/btnNum8"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginStart="50dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/app_nr8"
@@ -109,8 +109,8 @@
 
         <Button
             android:id="@+id/btnNum9"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginStart="40dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/app_nr9"
@@ -119,8 +119,8 @@
 
         <Button
             android:id="@+id/btnNum10"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginStart="50dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/app_nr10"

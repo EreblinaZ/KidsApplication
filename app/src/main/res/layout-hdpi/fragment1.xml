@@ -2,44 +2,54 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_nr1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment2">
+    tools:context=".fragment1">
+
 
     <TextView
-        android:id="@+id/textTwo"
+        android:id="@+id/textOne"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:text="@string/txtView_two"
+        android:layout_height="25dp"
+        android:text="@string/txtView_one"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageCows"
+        android:id="@+id/imageHorse"
         android:layout_width="wrap_content"
-        android:layout_height="300dp"
-        android:layout_marginTop="15dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="5dp"
         android:contentDescription="@string/description"
-        android:src="@drawable/app_two"
+        android:src="@drawable/app_one"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTwo" />
+        app:layout_constraintTop_toBottomOf="@+id/textOne" />
 
     <ImageView
-        android:id="@+id/imageApples"
-        android:layout_width="400dp"
-        android:layout_height="250dp"
-        android:layout_marginTop="15dp"
+        android:id="@+id/imageFish"
+        android:layout_width="wrap_content"
+        android:layout_height="130dp"
         android:contentDescription="@string/description"
-        android:src="@drawable/app_dyy"
+        android:src="@drawable/app_nje"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageCows" />
+        app:layout_constraintTop_toBottomOf="@+id/imageHorse" />
 
+    <ImageView
+        android:id="@+id/imageBanana"
+        android:layout_width="200dp"
+        android:layout_height="120dp"
+        android:contentDescription="@string/description"
+        android:src="@drawable/app_oneb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageFish" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,8 +15,8 @@
 
         <ImageView
             android:contentDescription="@string/description"
-            android:layout_width="192dp"
-            android:layout_height="120dp"
+            android:layout_width="130dp"
+            android:layout_height="100dp"
             android:layout_gravity="center"
             android:gravity="center"
             android:src="@drawable/app_logo" />
@@ -26,12 +26,12 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp">
+            android:layout_marginTop="5dp">
 
             <ImageView
                 android:contentDescription="@string/description"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:src="@drawable/app_username" />
@@ -41,7 +41,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/username"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:lines="1"
                 android:autofillHints="username"
                 android:inputType="text" />
@@ -52,12 +52,12 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp">
+            android:layout_marginTop="5dp">
 
             <ImageView
                 android:contentDescription="@string/description"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:src="@drawable/app_email" />
@@ -67,7 +67,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/email"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:lines="1"
                     android:autofillHints="email"
                     android:inputType="textEmailAddress"/>
@@ -78,12 +78,12 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp">
+            android:layout_marginTop="5dp">
 
             <ImageView
                 android:contentDescription="@string/description"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:src="@drawable/app_password" />
@@ -94,7 +94,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/password"
                     android:inputType="textPassword"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:lines="1"
                     android:autofillHints="password" />
         </LinearLayout>
@@ -105,12 +105,12 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp">
+            android:layout_marginTop="5dp">
 
             <ImageView
                 android:contentDescription="@string/description"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:src="@drawable/app_password" />
 
@@ -118,10 +118,10 @@
                     android:id="@+id/txtConfirmPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="5dp"
                     android:hint="@string/confirm_password"
                     android:inputType="textPassword"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:lines="1"
                     android:autofillHints="password" />
         </LinearLayout>
@@ -130,22 +130,22 @@
         <!-- Radio Buttons (Gender) -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="25dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="15dp">
+            android:layout_marginTop="5dp">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="3dp"
                 android:layout_weight="1"
                 android:text="@string/gender"
                 android:textColor="#410E9A"
-                android:textSize="20sp" />
+                android:textSize="14sp" />
 
             <RadioGroup
                 android:id="@+id/txtGender"
-                android:layout_width="264dp"
+                android:layout_width="210dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:orientation="horizontal">
@@ -159,7 +159,7 @@
                     android:checked="true"
                     android:text="@string/male"
                     android:textColor="#410E9A"
-                    android:textSize="20sp" />
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/btnFemale"
@@ -169,7 +169,7 @@
                     android:layout_weight="1"
                     android:text="@string/female"
                     android:textColor="#410E9A"
-                    android:textSize="20sp" />
+                    android:textSize="14sp" />
             </RadioGroup>
         </LinearLayout>
 
@@ -178,13 +178,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
             tools:ignore="UseCompoundDrawables">
 
             <ImageView
                 android:contentDescription="@string/description"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:src="@drawable/app_calendar" />
@@ -193,23 +193,23 @@
                 android:id="@+id/txtBirthday"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="2dp"
                 android:layout_marginStart="5dp"
                 android:hint="@string/birthday"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
         </LinearLayout>
 
 
         <!-- Register Button -->
         <Button
             android:id="@+id/btnRegister"
-            android:layout_width="190dp"
-            android:layout_height="55dp"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:text="@string/btnRegister"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="13sp"
             android:textStyle="bold" />
 
 
@@ -222,7 +222,7 @@
             android:layout_marginTop="10dp"
             android:text="@string/now_login"
             android:textColor="#410E9A"
-            android:textSize="20sp" />
+            android:textSize="15sp" />
 
     </LinearLayout>
 </ScrollView>
