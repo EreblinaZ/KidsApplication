@@ -3,7 +3,7 @@
 <h1>Why?</h1>
 <p>KidsApp is a mobile application for Android OS that makes kids familiar with alphabet, numbers, colors and basic things. Kids who struggle with spelling can say a word or sound it out, and then see how it’s spelled on screen. There are a lot of interesting stories to read too.</p>
 <h1>How?</h1>
-<p>KidsApp is open source and you can get it by downloading it from PlayStore. To use it you must create an account by filling the register form, then you can use the app whenever you want by loggin. Most of things are ilustrated, which makes this app very easy to use by children.</p>
+<p>KidsApp is open source and you can get it by downloading it. To use it you must create an account by filling the register form, then you can use the app whenever you want by loggin. Most of things are ilustrated, which makes this app very easy to use by children.</p>
 <h1>What?</h1>
 <table>
 <tr><td>Category</td><td>What?<td></tr>
