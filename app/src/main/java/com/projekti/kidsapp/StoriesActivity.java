@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -47,7 +46,9 @@ public class StoriesActivity extends AppCompatActivity {
         title_list = new ArrayList<>();
         answer_list = new ArrayList<>();
 
+        //item layout
         arrayAdapter = new ArrayAdapter<>(this, R.layout.item, R.id.item,title_list);
+
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {

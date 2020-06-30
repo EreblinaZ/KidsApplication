@@ -17,10 +17,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COL_BIRTHDAY = "BIRTHDAY";
     private static final String COL_GENDER = "GENDER";
 
+
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, 1);
     }
 
+
+    //Database is created for the first time
     @Override
     public void onCreate(SQLiteDatabase db) {
         String CREATE_KIDS_TABLE = "CREATE TABLE " + TABLE_NAME + "(" + COL_ID +
@@ -29,6 +32,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(CREATE_KIDS_TABLE);
     }
 
+
+    //The original table will be dropped and a new table will be created (version issues)
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         String DROP_TABLE = "DROP TABLE IF EXISTS " + TABLE_NAME;
@@ -36,6 +41,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    //Inserting data
     long insertData(String name, String email, String password, String birthday, String gender) {
 
         SQLiteDatabase db = this.getWritableDatabase();
@@ -50,6 +56,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return result;
     }
 
+    //Check if the user exist
     boolean checkUser(String email, String password) {
         String[] columns = {COL_ID};
 

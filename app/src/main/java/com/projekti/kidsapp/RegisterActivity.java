@@ -6,25 +6,23 @@ import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Patterns;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.material.snackbar.Snackbar;
 import com.shashank.sony.fancytoastlib.FancyToast;
 
 import java.util.Calendar;
 
 public class RegisterActivity extends AppCompatActivity {
+
     DatabaseHelper databaseHelper;
     EditText txtUsername, txtEmail, txtPassword, txtConfirmPassword;
     RadioGroup txtGender;
@@ -48,6 +46,8 @@ public class RegisterActivity extends AppCompatActivity {
         addData();
     }
 
+
+    // Find views from the layout resource
     public void init() {
         txtUsername = findViewById(R.id.txtUsername);
         txtEmail = findViewById(R.id.txtEmail);
@@ -60,11 +60,13 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
+    // btnRegister click event
     public void addData() {
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+                //Getting values from edit texts
                 String username = txtUsername.getText().toString();
                 String email = txtEmail.getText().toString();
                 String password = txtPassword.getText().toString();
@@ -72,14 +74,16 @@ public class RegisterActivity extends AppCompatActivity {
                 String birthday = txtBirthday.getText().toString();
 
 
-                //button animation
+                //Animation for btnRegister
                 Animation animation= AnimationUtils.loadAnimation(RegisterActivity.this, R.anim.blink);
                 btnRegister.startAnimation(animation);
-                // for gender selection
+
+                // Gender selection
                 select = findViewById(txtGender.getCheckedRadioButtonId());
                 gender = select.getText().toString().trim();
 
-                // for birthday selection
+
+                // Birthday selection
                 txtBirthday.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -101,6 +105,7 @@ public class RegisterActivity extends AppCompatActivity {
                     }
                 });
 
+                //Return a boolean value
                 if (TextUtils.isEmpty(username)) {
                     Toast.makeText(RegisterActivity.this, "Please enter the username ", Toast.LENGTH_SHORT).show();
                 } else if (TextUtils.isEmpty(email)) {
@@ -124,6 +129,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         });
 
+        // Go to Login
         loginLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -2,8 +2,6 @@
 package com.projekti.kidsapp;
 
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -23,7 +21,6 @@ import org.xmlpull.v1.XmlPullParserFactory;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.List;
 
 public class AboutUsActivity extends AppCompatActivity {
 
@@ -43,21 +40,7 @@ public class AboutUsActivity extends AppCompatActivity {
         btnpopUp=findViewById(R.id.btnpopUp);
         parseXML();
 
-        /*btnCall.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-               final Snackbar snackbar=Snackbar.make(aboutus, "Call us", Snackbar.LENGTH_INDEFINITE);
-                  snackbar.setAction("Dismiss", new View.OnClickListener() {
-                      @Override
-                      public void onClick(View v) {
-                          snackbar.dismiss();
-                      }
-                  });
-                snackbar.setDuration(7000);
-                snackbar.show();
-            }
-        });*/
         btnMail.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){

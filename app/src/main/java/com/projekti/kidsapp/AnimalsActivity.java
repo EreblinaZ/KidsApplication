@@ -26,7 +26,7 @@ public class AnimalsActivity extends AppCompatActivity {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
 
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "AnimalsActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,17 +34,14 @@ public class AnimalsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_animals);
 
         mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
-
-
-        // use this setting to improve performance if you know that changes
-        // in content do not change the layout size of the RecyclerView
+        // use this setting to improve performance if you know that changes, in content do not change the layout size of the RecyclerView
         mRecyclerView.setHasFixedSize(true);
 
         // use a linear layout manager
         layoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(layoutManager);
 
-        // specify an adapter (see also next example)
+        // specify an adapter
         mAdapter = new RecyclerAdapter(this, viewItems);
         mRecyclerView.setAdapter(mAdapter);
 
@@ -52,6 +49,7 @@ public class AnimalsActivity extends AppCompatActivity {
 
     }
 
+    //adding data
     private void addItemsFromJSON() {
         try {
 
@@ -65,8 +63,8 @@ public class AnimalsActivity extends AppCompatActivity {
                 String type = itemObj.getString("type");
                 String animals = itemObj.getString("animals");
 
-                Animals holidays = new Animals(type, animals);
-                viewItems.add(holidays);
+                Animals animals1 = new Animals(type, animals);
+                viewItems.add(animals1);
             }
 
         } catch (JSONException | IOException e) {
@@ -74,6 +72,7 @@ public class AnimalsActivity extends AppCompatActivity {
         }
     }
 
+    //reading animals.json file in raw folder
     private String readJSONDataFromFile() throws IOException{
 
         InputStream inputStream = null;

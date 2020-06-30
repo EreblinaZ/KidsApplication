@@ -7,13 +7,10 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
-import android.util.Patterns;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -39,6 +36,7 @@ public class LoginActivity extends AppCompatActivity {
     Boolean saveLogin;
     CheckBox saveLoginCheckBox;
 
+    //Permissions
     private  final int REQUEST_PERMISSION_CODE = 1;
 
     private final String[] permissions = new String[]{
@@ -55,32 +53,41 @@ public class LoginActivity extends AppCompatActivity {
         txtPassword = findViewById(R.id.txtPassword);
         btnLogin = findViewById(R.id.btnLogin);
 
+        //Async Task
         tvProgress = findViewById(R.id.tvProgress);
 
+        //Shared Preferences
         sharedPreferences = getSharedPreferences("loginref", MODE_PRIVATE);
         saveLoginCheckBox = findViewById(R.id.checkBoxRememberMe);
         editor = sharedPreferences.edit();
 
-
+        //Register link
         registerLink = findViewById(R.id.registerLink);
 
 
         databaseHelper = new DatabaseHelper(this);
 
+        //btnLogin click event
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                //Shared Preferences
                 login();
 
+                //Async Task
                 AsyncTaskWork asyncTaskWork = new AsyncTaskWork();
                 asyncTaskWork.execute();
 
+                // Find views from the layout resource
                 String email = txtEmail.getText().toString();
                 String password = txtPassword.getText().toString();
+
+
                 boolean res = databaseHelper.checkUser(email, password);
 
 
+                //Return a boolean value
                 if (TextUtils.isEmpty(email)) {
                     Toast.makeText(LoginActivity.this, "Please enter the email ", Toast.LENGTH_SHORT).show();
                 } else if (TextUtils.isEmpty(password)) {
@@ -94,12 +101,13 @@ public class LoginActivity extends AppCompatActivity {
                     FancyToast.makeText(LoginActivity.this, "Not Registered", FancyToast.LENGTH_SHORT,FancyToast.ERROR,true).show();
                 }
 
+                //Animation for btnLogin
                 Animation animation = AnimationUtils.loadAnimation(LoginActivity.this, R.anim.blink);
                 btnLogin.startAnimation(animation);
             }
         });
 
-
+        //Go to Register
         registerLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -130,10 +138,13 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+
+    //Permissions writeToDisk
     private void writeToDisk() {
     }
 
 
+    //Shared Preferences
     public void login(){
         String email = txtEmail.getText().toString();
         String password = txtPassword.getText().toString();
@@ -146,6 +157,7 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
+    //Async Task
     private class AsyncTaskWork extends AsyncTask<Void, Integer, String> {
 
         @Override
