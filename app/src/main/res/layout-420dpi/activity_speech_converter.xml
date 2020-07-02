@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,6 +7,9 @@
     android:background="#FFF5E0"
     tools:context=".SpeechConverterActivity">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <TextView
         android:id="@+id/titleConvert"
         android:layout_width="wrap_content"
@@ -14,13 +17,14 @@
         android:layout_marginTop="40dp"
         android:text="@string/saySomething"
         android:textColor="@color/colorPrimary"
-        android:textStyle="bold"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="350dp"
         android:layout_height="30dp"
         android:layout_marginTop="30dp"
@@ -38,23 +42,22 @@
         android:id="@+id/voiceButton"
         android:layout_width="130dp"
         android:layout_height="130dp"
-        android:layout_marginBottom="0dp"
+        android:layout_marginTop="300dp"
+        android:contentDescription="@string/description"
         android:src="@drawable/ic_baseline_mic_24"
-        app:layout_constraintBottom_toTopOf="@+id/tapToSpeech"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:contentDescription="@string/description"/>
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <TextView
         android:id="@+id/tapToSpeech"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="20dp"
         android:text="@string/tap_to_speech"
         android:textSize="23sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/voiceButton" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
